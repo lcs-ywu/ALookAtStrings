@@ -14,6 +14,7 @@ let example = "The quick brown fox jumped over the lazy dog."
 
 // Iterate over each character in the string
 for singleCharacter in example {
+    singleCharacter
     // The output will show below in the Debug area
     print(singleCharacter)
 }
@@ -141,7 +142,11 @@ print("Second last character is: \(secondLast)")
  */
 // This will separate the output from the examples above from your work
 print("===== Exercise 1 begins =====")
-
+let name = "James Wu"
+for singleCharacter in name {
+    
+    print(singleCharacter)}
+print("===== Exercise 1 ends =====")
 
 
 /*:
@@ -157,9 +162,15 @@ print("===== Exercise 2 begins =====")
 
 // Create a string
 let aQuestion = "请问现在几点了?"
+index = aQuestion.index(aQuestion.startIndex, offsetBy: 3)
+let fourthCharacter = aQuestion[index]
+print(fourthCharacter)
 
+index = aQuestion.index(aQuestion.endIndex, offsetBy: -5)
+let fourthCharacter2 = aQuestion[index]
+print(fourthCharacter2)
 // Write code to complete the exercise below...
-
+print("===== Exercise 2 ends =====")
 /*:
 ### Exercise 3
 
