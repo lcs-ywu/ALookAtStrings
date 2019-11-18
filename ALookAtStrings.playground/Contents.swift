@@ -187,6 +187,29 @@ Say that you wish to encrypt the word `pen` using a *rightward shift of three ch
 */
 
 // Create the starting phrase
-let plainText = "pen"
+let plainText = "CAB"
+
+//Create a variable to store the ciphertext
+var cipherText = ""
 
 // Encrypt the starting phrase
+for singleCharacter in plainText.unicodeScalars {
+   
+    //Showing the plaintext characters and their values
+   print(singleCharacter)
+   print(singleCharacter.value)
+    
+    
+   //Shift each scalar value by 3
+   let newScalarValue = singleCharacter.value + 3
+    
+   //Attempt to convert the scalar value to an actual scalar ( character)
+   if let newScalar = UnicodeScalar(newScalarValue){
+        print(newScalarValue)
+        print(newScalar)
+        cipherText += String(newScalar)
+    }
+}
+
+print("The encrypted text is \(cipherText)")
+
